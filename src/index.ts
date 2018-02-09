@@ -1,6 +1,7 @@
-import { ToolsetsDefined } from "atomservicescore";
 import * as Koa from "koa";
-import { AtomsKoaApplication, AtomsKoaToolFactory } from "./lib";
+import { ToolsetsDefined } from "atomservicescore";
+import { AtomsKoaToolFactory } from "./lib";
+import { AtomsKoaApplication } from "./lib/core";
 
 export { Koa, AtomsKoaApplication };
 
