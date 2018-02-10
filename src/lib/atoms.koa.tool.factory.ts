@@ -9,10 +9,10 @@ export const AtomsKoaToolFactory = (toolsetsName: string, properties: any) => {
   application.getProcessContext = () => Util.getProcessContext(application);
   application.setProcessContext = (processContext: IProcessContext) => Util.setProcessContext(application, processContext);
 
-  application.use(async (ctx: Koa.Context, next: () => void) => Util.composeHttpContext(ctx, next, application.getProcessContext()));
+  application.use((ctx: Koa.Context, next: () => void) => Util.composeHttpContext(ctx, next, application.getProcessContext()));
 
   application.compose = (composing: Function, ...args: any[]) =>
-    async (ctx: Koa.Context, next: () => void) => composing.apply(undefined, [ctx, ...args, next]);
+    (ctx: Koa.Context, next: () => void) => composing.apply(undefined, [ctx, ...args, next]);
 
   application.useCompose = (composing: Function, ...args: any[]) => {
     const composed: any = application.compose(composing, ...args);
