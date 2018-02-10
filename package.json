@@ -23,12 +23,14 @@
   "license": "MIT",
   "repository": "git+https://github.com/atomecos/atoms-koatool",
   "dependencies": {
-    "atoms-httpcore": "0.0.1-alpha.9",
+    "atoms-httpcore": "0.0.1-alpha.10",
     "atomservicescore": "0.1.0-alpha.19",
-    "koa": "^2.4.1"
+    "koa": "^2.4.1",
+    "koa-bodyparser": "^4.2.0"
   },
   "devDependencies": {
     "@types/koa": "^2.0.44",
+    "@types/koa-bodyparser": "^4.2.0",
     "@types/node": "^9.4.4",
     "chai": "^4.1.2",
     "mocha": "^5.0.0",
