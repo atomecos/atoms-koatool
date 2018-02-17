@@ -1,7 +1,7 @@
 import { HttpContextStore, Util } from "atoms-httpcore";
 import { IProcessContext } from "atomservicescore";
 
-export const composeHttpContext = async (ctx: any, next: () => void, processContext?: IProcessContext) => {
+export const composeHttpContext = async (ctx: any, next: () => Promise<any>, processContext?: IProcessContext) => {
   ctx.toolname = "AtomsKoaTool";
   ctx.process = processContext;
   ctx.store = new HttpContextStore();
